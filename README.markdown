@@ -7,6 +7,28 @@ This probably requires you to activate the Photo Stream in your iCloud
 System Preferences.
 
 
+Usage
+-----
+
+To get going:
+
+    photostream start <directory>
+
+This will start it syncing to the given directory. If you don't supply a
+directory, it will sync into `$HOME/Pictures/Photo Stream`.
+
+    photostream sync <directory>
+
+This will perform a one-off sync. This is what gets run by the background job.
+Again, if you don't supply a directory, the default will be used.
+
+    photostream stop
+
+This will stop the sync, and remove the background job. It won't, however,
+remove any of the linked files that it created. I'm afraid you'll need to do
+that yourself.
+
+
 How does it work?
 ------
 
